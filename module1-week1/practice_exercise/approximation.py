@@ -2,6 +2,7 @@ import math
 
 
 def factorial(n):
+    # Calculate factorial, return NaN if n is negative
     if n < 0:
         return math.nan
     elif n == 0:
@@ -10,20 +11,20 @@ def factorial(n):
 
 
 def sin_approximation(x, terms):
-    sin_x = sum(((-1) ** i) * (x ** (2 * i + 1)) / factorial(2 * i + 1) for i in range(terms))
-    return sin_x
+    # Approximate sine of x using Taylor series
+    return sum(((-1) ** i) * (x ** (2 * i + 1)) / factorial(2 * i + 1) for i in range(terms))
 
 
 def cos_approximation(x, terms):
-    cos_x = sum(((-1) ** i) * (x ** (2 * i)) / factorial(2 * i) for i in range(terms))
-    return cos_x
+    # Approximate cosine of x using Taylor series
+    return sum(((-1) ** i) * (x ** (2 * i)) / factorial(2 * i) for i in range(terms))
 
 
 def sinh_approximation(x, terms):
-    sinh_x = sum((x ** (2 * i + 1)) / factorial(2 * i + 1) for i in range(terms))
-    return sinh_x
+    # Approximate hyperbolic sine of x using Taylor series
+    return sum((x ** (2 * i + 1)) / factorial(2 * i + 1) for i in range(terms))
 
 
 def cosh_approximation(x, terms):
-    cosh_x = sum((x ** (2 * i)) / factorial(2 * i) for i in range(terms))
-    return cosh_x
+    # Approximate hyperbolic cosine of x using Taylor series
+    return sum((x ** (2 * i)) / factorial(2 * i) for i in range(terms))
