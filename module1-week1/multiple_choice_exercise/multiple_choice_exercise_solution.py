@@ -1,10 +1,12 @@
-import math
-from practice_exercise.evaluate_f1_score import evaluate_model_f1_score, evaluate_model_f1_score
-
 # Q1.
+# def evaluate_model_f1_score(tp, fp, fn):
+#     precision = tp / (tp + fp)
+#     recall = tp / (tp + fn)
+#     f1_score = 2 * precision * recall / (precision + recall)
+#     return f1_score
 # assert round(evaluate_model_f1_score(2, 3, 5), 2) == 0.33
 # print(round(evaluate_model_f1_score(2, 3, 5),2))
-# -> D
+# -> C
 
 
 # Q2.

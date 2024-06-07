@@ -2,22 +2,22 @@ import math
 import unittest
 from unittest.mock import patch
 
-from practice_exercise.loss_regression_calculator import valid_input_loss_calculator, loss_regression_calculator
+from practice_exercise.loss_regression_calculator import valid_input, loss_regression_calculator
 
 
 class TestLossRegressionCalculator(unittest.TestCase):
 
-    def test_valid_input_loss_calculator_valid_inputs(self):
-        self.assertEqual(valid_input_loss_calculator('10', 'MAE'), (10, 'MAE'))
-        self.assertEqual(valid_input_loss_calculator('20', 'MSE'), (20, 'MSE'))
-        self.assertEqual(valid_input_loss_calculator('30', 'RMSE'), (30, 'RMSE'))
+    def test_valid_input_valid_inputs(self):
+        self.assertEqual(valid_input('10', 'MAE'), (10, 'MAE'))
+        self.assertEqual(valid_input('20', 'MSE'), (20, 'MSE'))
+        self.assertEqual(valid_input('30', 'RMSE'), (30, 'RMSE'))
 
-    def test_valid_input_loss_calculator_invalid_samples(self):
-        self.assertEqual(valid_input_loss_calculator('abc', 'MAE'), (False, "Number of samples must be an integer"))
-        self.assertEqual(valid_input_loss_calculator('10.5', 'MSE'), (False, "Number of samples must be an integer"))
+    def test_valid_input_invalid_samples(self):
+        self.assertEqual(valid_input('abc', 'MAE'), (False, "Number of samples must be an integer"))
+        self.assertEqual(valid_input('10.5', 'MSE'), (False, "Number of samples must be an integer"))
 
-    def test_valid_input_loss_calculator_invalid_loss_name(self):
-        self.assertEqual(valid_input_loss_calculator('10', 'XYZ'), (False, "XYZ is not supported"))
+    def test_valid_input_invalid_loss_name(self):
+        self.assertEqual(valid_input('10', 'XYZ'), (False, "XYZ is not supported"))
 
     @patch('random.uniform')
     def test_loss_regression_calculator_mae(self, mock_random):
