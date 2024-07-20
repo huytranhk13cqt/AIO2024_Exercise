@@ -1,0 +1,44 @@
+\begin{flushleft} \\
+    Here are the steps to calculate the Cosine similarity \(\text{cs}(\mathbf{x}, \mathbf{y})\) manually, written in LaTeX:
+    
+    \[
+    \text{Cosine similarity} = \frac{\mathbf{x} \cdot \mathbf{y}}{\|\mathbf{x}\| \|\mathbf{y}\|}
+    \]
+    
+    Given the vectors:
+    
+    \[
+    \mathbf{x} = \begin{bmatrix} 1 \\ 2 \\ 3 \\ 4 \end{bmatrix}, \quad \mathbf{y} = \begin{bmatrix} 1 \\ 0 \\ 3 \\ 0 \end{bmatrix}
+    \]
+    
+    Step 1: Calculate the dot product of \(\mathbf{x}\) and \(\mathbf{y}\):**
+    
+    \[
+    \mathbf{x} \cdot \mathbf{y} = 1 \cdot 1 + 2 \cdot 0 + 3 \cdot 3 + 4 \cdot 0 = 1 + 0 + 9 + 0 = 10
+    \]
+    
+    Step 2: Calculate the magnitude of vector \(\mathbf{x}\):**
+    
+    \[
+    \|\mathbf{x}\| = \sqrt{1^2 + 2^2 + 3^2 + 4^2} = \sqrt{1 + 4 + 9 + 16} = \sqrt{30}
+    \]
+    
+    Step 3: Calculate the magnitude of vector \(\mathbf{y}\):**
+    
+    \[
+    \|\mathbf{y}\| = \sqrt{1^2 + 0^2 + 3^2 + 0^2} = \sqrt{1 + 0 + 9 + 0} = \sqrt{10}
+    \]
+    
+    Step 4: Calculate the Cosine similarity:**
+    
+    \[
+    \text{Cosine similarity} = \frac{\mathbf{x} \cdot \mathbf{y}}{\|\mathbf{x}\| \|\mathbf{y}\|} = \frac{10}{\sqrt{30} \cdot \sqrt{10}} = \frac{10}{\sqrt{300}} = \frac{10}{10\sqrt{3}} = \frac{1}{\sqrt{3}} \approx 0.577
+    \]
+    
+    In summary, the Cosine similarity between \(\mathbf{x}\) and \(\mathbf{y}\) is:
+    
+    \[
+    \text{Cosine similarity} = \frac{1}{\sqrt{3}} \approx 0.577
+    \]
+    
+    \end{flushleft}
