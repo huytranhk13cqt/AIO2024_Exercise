@@ -1,0 +1,151 @@
+\documentclass{article}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage{float}
+
+\begin{document} \\
+\begin{flushleft} \\
+Find eigenvalues and eigenvectors: \\
+Step 1: Find the Characteristic Polynomial \\
+The eigenvalues \(\lambda\) of a matrix are found by solving the characteristic equation:
+\[
+\det(A - \lambda I) = 0
+\]
+For the given matrix \( A \):
+\[
+A - \lambda I = \begin{bmatrix} 0.9 & 0.2 \\ 0.1 & 0.8 \end{bmatrix} - \lambda \begin{bmatrix} 1 & 0 \\ 0 & 1 \end{bmatrix} = \begin{bmatrix} 0.9 - \lambda & 0.2 \\ 0.1 & 0.8 - \lambda \end{bmatrix}
+\]
+Now, calculate the determinant of \( A - \lambda I \):
+\[
+\det(A - \lambda I) = (0.9 - \lambda)(0.8 - \lambda) - (0.2)(0.1)
+\]
+
+Step 2: Solve the Characteristic Equation \\
+\[
+(0.9 - \lambda)(0.8 - \lambda) - 0.02 = 0
+\]
+Expanding the left side:
+\[
+(0.9 - \lambda)(0.8 - \lambda) = 0.72 - 0.9\lambda - 0.8\lambda + \lambda^2
+\]
+\[
+0.72 - 1.7\lambda + \lambda^2 - 0.02 = 0
+\]
+\[
+\lambda^2 - 1.7\lambda + 0.7 = 0
+\]
+
+Step 3: Solve the Quadratic Equation \\
+\[
+\lambda = \frac{-b \pm \sqrt{b^2 - 4ac}}{2a}
+\]
+Where \( a = 1 \), \( b = -1.7 \), and \( c = 0.7 \):
+\[
+\lambda = \frac{1.7 \pm \sqrt{(-1.7)^2 - 4 \cdot 1 \cdot 0.7}}{2 \cdot 1}
+\]
+\[
+\lambda = \frac{1.7 \pm \sqrt{2.89 - 2.8}}{2}
+\]
+\[
+\lambda = \frac{1.7 \pm \sqrt{0.09}}{2}
+\]
+\[
+\lambda = \frac{1.7 \pm 0.3}{2}
+\]
+\[
+\lambda_1 = \frac{1.7 + 0.3}{2} = 1
+\]
+\[
+\lambda_2 = \frac{1.7 - 0.3}{2} = 0.7
+\]
+\end{flushleft}
+\end{document} \\
+
+Step 4:
+For each eigenvalue, we solve the equation \( (A - \lambda I)x = 0 \).
+
+Eigenvector for \( \lambda_1 = 1 \):
+\[
+A - I = \begin{bmatrix} 0.9 - 1 & 0.2 \\ 0.1 & 0.8 - 1 \end{bmatrix} = \begin{bmatrix} -0.1 & 0.2 \\ 0.1 & -0.2 \end{bmatrix}
+\]
+
+Solving:
+\[
+\begin{bmatrix} -0.1 & 0.2 \\ 0.1 & -0.2 \end{bmatrix} \begin{bmatrix} x_1 \\ x_2 \end{bmatrix} = \begin{bmatrix} 0 \\ 0 \end{bmatrix}
+\]
+This gives us the equations:
+\[
+-0.1x_1 + 0.2x_2 = 0
+\]
+\[
+0.1x_1 - 0.2x_2 = 0
+\]
+These equations are dependent, leading to:
+\[
+x_1 = 2x_2
+\]
+Thus, the eigenvector corresponding to \(\lambda_1 = 1\) is any scalar multiple of:
+\[
+\begin{bmatrix} 2 \\ 1 \end{bmatrix}
+\]
+Eigenvector for \( \lambda_2 = 0.7 \):
+\[
+A - 0.7I = \begin{bmatrix} 0.9 - 0.7 & 0.2 \\ 0.1 & 0.8 - 0.7 \end{bmatrix} = \begin{bmatrix} 0.2 & 0.2 \\ 0.1 & 0.1 \end{bmatrix}
+\]
+Solving:
+\[
+\begin{bmatrix} 0.2 & 0.2 \\ 0.1 & 0.1 \end{bmatrix} \begin{bmatrix} x_1 \\ x_2 \end{bmatrix} = \begin{bmatrix} 0 \\ 0 \end{bmatrix}
+\]
+This gives us the equations:
+\[
+0.2x_1 + 0.2x_2 = 0
+\]
+\[
+0.1x_1 + 0.1x_2 = 0
+\]
+These equations are dependent, leading to:
+\[
+x_1 = -x_2
+\]
+Thus, the eigenvector corresponding to \(\lambda_2 = 0.7\) is any scalar multiple of:
+\[
+\begin{bmatrix} -1 \\ 1 \end{bmatrix}
+\] \\
+
+Normalizing the Eigenvectors: \\
+To match the provided eigenvectors, we need to normalize them:
+
+For \(\lambda_1 = 1\):
+\[
+\begin{bmatrix} 2 \\ 1 \end{bmatrix} \rightarrow \frac{1}{\sqrt{2^2 + 1^2}} \begin{bmatrix} 2 \\ 1 \end{bmatrix} = \frac{1}{\sqrt{5}} \begin{bmatrix} 2 \\ 1 \end{bmatrix} = \begin{bmatrix} \frac{2}{\sqrt{5}} \\ \frac{1}{\sqrt{5}} \end{bmatrix}
+\]
+
+Simplifying:
+
+\[
+\begin{bmatrix} \frac{2}{\sqrt{5}} \\ \frac{1}{\sqrt{5}} \end{bmatrix} = \begin{bmatrix} 0.89442719 \\ 0.4472136 \end{bmatrix}
+\]
+
+For \(\lambda_2 = 0.7\):
+\[
+\begin{bmatrix} -1 \\ 1 \end{bmatrix} \rightarrow \frac{1}{\sqrt{(-1)^2 + 1^2}} \begin{bmatrix} -1 \\ 1 \end{bmatrix} = \frac{1}{\sqrt{2}} \begin{bmatrix} -1 \\ 1 \end{bmatrix} = \begin{bmatrix} -\frac{1}{\sqrt{2}} \\ \frac{1}{\sqrt{2}} \end{bmatrix}
+\]
+
+Simplifying:
+\[
+\begin{bmatrix} -\frac{1}{\sqrt{2}} \\ \frac{1}{\sqrt{2}} \end{bmatrix} = \begin{bmatrix} -0.70710678 \\ 0.70710678 \end{bmatrix}
+\]
+
+Summary:\\
+The eigenvalues and corresponding normalized eigenvectors of matrix \( A \) are:
+\[
+\lambda_1 = 1, \quad \text{with normalized eigenvector} \quad \begin{bmatrix} 0.89442719 \\ 0.4472136 \end{bmatrix}
+\]
+\[
+\lambda_2 = 0.7, \quad \text{with normalized eigenvector} \quad \begin{bmatrix} -0.70710678 \\ 0.70710678 \end{bmatrix}
+\]
+
+\end{flushleft} \\
+\end{document} 

@@ -1,0 +1,25 @@
+Finding the Inverse of Matrix \( A \)
+
+Given the matrix \( A \):
+\[ A = \begin{bmatrix} -2 & 6 \\ 8 & -4 \end{bmatrix} \]
+
+1. Matrix \( A \):
+\[ A = \begin{bmatrix} a & b \\ c & d \end{bmatrix} = \begin{bmatrix} -2 & 6 \\ 8 & -4 \end{bmatrix} \]
+
+2. Determinant of \( A \):
+\[ \text{det}(A) = ad - bc \]
+\[ \text{det}(A) = (-2 \cdot -4) - (6 \cdot 8) \]
+\[ \text{det}(A) = 8 - 48 \]
+\[ \text{det}(A) = -40 \]
+
+3. Invertibility:
+Since \(\text{det}(A) \neq 0\), \( A \) is invertible.
+
+4. Inverse Matrix:
+\[ A^{-1} = \frac{1}{\text{det}(A)} \begin{bmatrix} d & -b \\ -c & a \end{bmatrix} \]
+\[ A^{-1} = \frac{1}{-40} \begin{bmatrix} -4 & -6 \\ -8 & -2 \end{bmatrix} \]
+\[ A^{-1} = \begin{bmatrix} \frac{-4}{-40} & \frac{-6}{-40} \\ \frac{-8}{-40} & \frac{-2}{-40} \end{bmatrix} \]
+\[ A^{-1} = \begin{bmatrix} \frac{1}{10} & \frac{3}{20} \\ \frac{1}{5} & \frac{1}{20} \end{bmatrix} \]
+
+Thus, the inverse of matrix \( A \) is:
+\[ A^{-1} = \begin{bmatrix} \frac{1}{10} & \frac{3}{20} \\ \frac{1}{5} & \frac{1}{20} \end{bmatrix} \]
