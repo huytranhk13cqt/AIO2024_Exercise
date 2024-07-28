@@ -4,6 +4,17 @@ This repository contains all the weekly assignments of the AIO2024 course includ
 
 ## Notes
 
+0. automatically create basic folder
+
+```bash
+foreach ($week in "week1", "week2", "week3", "week4") {
+    New-Item -ItemType Directory -Path $week\practice_exercise -Force
+    New-Item -ItemType Directory -Path $week\multiple_choice_exercise -Force
+    New-Item -ItemType File -Path $week\multiple_choice_exercise\solution_$week.md -Force
+}
+
+```
+
 1. import function from any python files
 
 ```python
